@@ -76,7 +76,7 @@ def run(
         dnn=False,  # use OpenCV DNN for ONNX inference
 ):
     # weights = ROOT / 'best.pt',  # model.pt path(s)
-    source = 'Package-images.mp4',  # file/dir/URL/glob, 0 for webcam
+    # source = 'Package-images.mp4',  # file/dir/URL/glob, 0 for webcam
 
     source = str(source)
     save_img = not nosave and not source.endswith('.txt')  # save inference images
@@ -241,7 +241,7 @@ def parse_opt():
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
     opt = parser.parse_args()
     opt.imgsz *= 2 if len(opt.imgsz) == 1 else 1  # expand
-    print_args(vars(opt))
+    # print_args(vars(opt))
     return opt
 
 
